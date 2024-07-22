@@ -18,7 +18,7 @@ jobs:
 
       - name: Set Repository Variables
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Define all variables
           declare -A variables=(
