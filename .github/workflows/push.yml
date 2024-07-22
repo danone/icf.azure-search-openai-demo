@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set Repository Variables
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Define all variables
           declare -A variables=(
@@ -89,6 +91,3 @@ jobs:
           for key in "${!variables[@]}"; do
             gh variable set $key --body "${variables[$key]}"
           done
-
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
