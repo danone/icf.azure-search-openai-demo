@@ -22,7 +22,7 @@ jobs:
         run: |
           # Define all variables with non-empty values
           declare -A variables=(
-              ["AZURE_CLIENT_ID"]="cc435f05-a449-4cb9-a3ee-fc4187ffd1ae"
+              ["AZURE_CLIENT_ID"]="f462eb86-ac42-4699-b174-d727612740d7"
               ["AZURE_TENANT_ID"]="4720ed5e-c545-46eb-99a5-958dd333e9f2"
               ["AZURE_SUBSCRIPTION_ID"]="91f14ce4-f7e5-497f-9d8f-43cbf0255733"
               ["AZURE_ENV_NAME"]="cicd"
