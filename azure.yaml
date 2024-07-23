@@ -94,12 +94,12 @@ hooks:
         shell: pwsh
         run: ./scripts/auth_init.ps1
         interactive: true
-        continueOnError: false
+        continueOnError: true ## temp
       posix:
         shell: sh
         run: ./scripts/auth_init.sh
         interactive: true
-        continueOnError: false
+        continueOnError: true ## temp
     postprovision:
       windows:
         shell: pwsh
