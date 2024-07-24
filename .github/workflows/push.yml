@@ -1,4 +1,22 @@
-  - name: Set Repository Variables
+name: Add Repo Variables
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+  id-token: write
+
+jobs:
+  add-repo-variables:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set Repository Variables
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
@@ -20,3 +38,8 @@
               ["AZURE_USE_AUTHENTICATION"]="true"
               ["OPENAI_HOST"]="azure"
           )
+
+          # Set GitHub repository variables
+          for key in "${!variables[@]}"; do
+            gh variable set $key --body "${variables[$key]}"
+          done
