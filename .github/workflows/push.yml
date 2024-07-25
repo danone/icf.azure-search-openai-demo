@@ -23,20 +23,12 @@ jobs:
           # Define all variables with non-empty values
           declare -A variables=(
               ["AZURE_CLIENT_APP_ID"]="ce0a97e3-c5e7-4637-a615-b88677c40ed3"
-              ["AZURE_CLIENT_ID"]="f462eb86-ac42-4699-b174-d727612740d7"
               ["AZURE_ENV_NAME"]="cicd-dev"
               ["AZURE_LOCATION"]="eastus"
-              ["AZURE_OPENAI_CHATGPT_DEPLOYMENT"]="chat"
               ["AZURE_OPENAI_CHATGPT_MODEL"]="gpt-35-turbo"
-              ["AZURE_OPENAI_EMB_DEPLOYMENT"]="embedding"
               ["AZURE_OPENAI_EMB_MODEL_NAME"]="text-embedding-ada-002"
-              ["AZURE_SEARCH_INDEX"]="gptkbindex"
-              ["AZURE_SEARCH_SEMANTIC_RANKER"]="free"
               ["AZURE_SERVER_APP_ID"]="08ee19f6-5ef5-4366-ba75-3ba3534784dd"
               ["AZURE_SUBSCRIPTION_ID"]="91f14ce4-f7e5-497f-9d8f-43cbf0255733"
-              ["AZURE_TENANT_ID"]="4720ed5e-c545-46eb-99a5-958dd333e9f2"
-              ["AZURE_USE_AUTHENTICATION"]="true"
-              ["OPENAI_HOST"]="azure"
           )
 
           # Set GitHub repository variables
